@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <script src="dom_Update.bundle.js"></script>
+  <script src="toDoCreator.bundle.js"></script>
+  <style>
+    #container{
+      display: grid;
+      grid-template: 1fr/ 1fr 5fr;
+    }
+
+    #container > *{
+      height: 80vh;
+      border: 5px solid black;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="sidebar">Sidebar area for holding project</div>
+    <div id="maincontent">main content area for showing todo item within a project</div>
+  </div>
+
+  <div class="todo-form">
+    <form>
+      <fieldset>
+        <legend>Add a new Todo item</legend>
+        <label for="Name">Name<input type="text" id="Name"></label>
+        <label for="Description">Description<input type="text" id="Description"></label>
+        <label for="Priority-Level">
+          Priority-Level
+          <select name="Priority" id="Priority-Level">
+            <option value="1">Low</option>
+            <option value="2" selected>Medium</option>
+            <option value="3">High</option>
+          </select>
+        </label>
+        <button type="button" id="Create-Todo">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <script src="index.bundle.js" defer></script>
+</body>
+</html>
